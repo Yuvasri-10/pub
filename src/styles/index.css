@@ -518,3 +518,280 @@ footer {
   display: block;
   color: #888;
 }
+
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #ffe6eb;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+header {
+  background-color: #ff96ad;
+  padding: 20px;
+  text-align: center;
+  color: white;
+  border-radius: 0 0 12px 12px;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+}
+
+header p {
+  margin: 5px 0 15px;
+  font-style: italic;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 8px 16px;
+  border-radius: 8px;
+  transition: background 0.3s;
+}
+
+nav a:hover {
+  background-color: #ff6f87;
+}
+
+.tracker-section {
+  padding: 30px 20px;
+  max-width: 900px;
+  margin: auto;
+}
+
+.tracker-section h2 {
+  font-size: 2rem;
+  color: #ff6f87;
+  margin-bottom: 10px;
+}
+
+.tracker-section p {
+  font-size: 1.1rem;
+  margin-bottom: 25px;
+}
+
+.tracker-container {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.tracker-card {
+  background-color: white;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(255, 111, 135, 0.3);
+  border: 2px solid #ff96ad;
+}
+
+.tracker-card h3 {
+  margin-top: 0;
+  color: #ff6f87;
+}
+
+.progress-bar {
+  background-color: #ffe6eb;
+  border-radius: 20px;
+  overflow: hidden;
+  height: 25px;
+  margin-top: 10px;
+  box-shadow: inset 0 0 5px rgba(0,0,0,0.1);
+}
+
+.progress-fill {
+  height: 100%;
+  background-color: #ff96ad;
+  text-align: right;
+  padding-right: 10px;
+  color: white;
+  font-weight: bold;
+  line-height: 25px;
+  border-radius: 20px 0 0 20px;
+  transition: width 0.5s ease-in-out;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #ff96ad;
+  color: white;
+  margin-top: 40px;
+  border-radius: 12px 12px 0 0;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #ffe6eb;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+header {
+  background-color: #ff96ad;
+  padding: 20px;
+  text-align: center;
+  color: white;
+  border-radius: 0 0 12px 12px;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+}
+
+header p {
+  margin: 5px 0 15px;
+  font-style: italic;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 8px 16px;
+  border-radius: 8px;
+  transition: background 0.3s;
+}
+
+nav a:hover {
+  background-color: #ff6f87;
+}
+
+.about-section {
+  padding: 40px 20px;
+  max-width: 800px;
+  margin: auto;
+  background-color: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 10px rgba(255, 111, 135, 0.15);
+  border: 2px solid #ff96ad;
+}
+
+.about-section h2 {
+  font-size: 2rem;
+  color: #ff6f87;
+  margin-bottom: 20px;
+}
+
+.about-section p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #555;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #ff96ad;
+  color: white;
+  margin-top: 40px;
+  border-radius: 12px 12px 0 0;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #ffe6eb;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+header {
+  background-color: #ff96ad;
+  padding: 20px;
+  text-align: center;
+  color: white;
+  border-radius: 0 0 12px 12px;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+}
+
+header p {
+  margin: 5px 0 15px;
+  font-style: italic;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 8px 16px;
+  border-radius: 8px;
+  transition: background 0.3s;
+}
+
+nav a:hover {
+  background-color: #ff6f87;
+}
+
+.contact-section {
+  padding: 40px 20px;
+  max-width: 800px;
+  margin: 40px auto;
+  background-color: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 10px rgba(255, 111, 135, 0.15);
+  border: 2px solid #ff96ad;
+}
+
+.contact-section h2 {
+  font-size: 2rem;
+  color: #ff6f87;
+  margin-bottom: 20px;
+}
+
+.contact-section p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #555;
+}
+
+.contact-section a {
+  color: #ff6f87;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.contact-section a:hover {
+  text-decoration: underline;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #ff96ad;
+  color: white;
+  margin-top: 40px;
+  border-radius: 12px 12px 0 0;
+}
