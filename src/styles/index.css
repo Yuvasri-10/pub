@@ -154,8 +154,7 @@ header h1::before {
       text-decoration: none;
     }
     nav a:hover {
-        background-color: #ffdde5; 
-        color: #ff6f87; 
+        color: #ffd1dc;
     }
   
 .intro {
