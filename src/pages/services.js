@@ -2,12 +2,6 @@ import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 
-<Link href="/api/auth/todoist" passHref>
-  <a style={{ padding: '10px 20px', borderRadius: '8px', display: 'inline-block', background: '#ff96ad', color: 'white', textDecoration: 'none' }}>
-    🔗 Connect to Todoist
-  </a>
-</Link>
-
 const defaultTasks = {
   professional: ["Finish project report", "Attend team meeting", "Send client follow-up email", "Review quarterly goals"],
   health: ["Go for a 30-minute run", "Drink 8 glasses of water", "Stretch for 10 minutes", "Book dentist appointment", "Prepare healthy meals for the week"],
@@ -20,7 +14,6 @@ const defaultTasks = {
 const STORAGE_KEY_BASE = 'AceItMonthlyTasks_';
 
 const getStorageKey = (month) => STORAGE_KEY_BASE + month;
-
 const getDaysInMonth = (monthStr) => {
   const [year, month] = monthStr.split('-').map(Number);
   return new Date(year, month, 0).getDate();
@@ -32,9 +25,10 @@ const TaskPlanner = () => {
   const [taskInput, setTaskInput] = useState('');
   const [category, setCategory] = useState('professional');
   const [daysInMonth, setDaysInMonth] = useState(getDaysInMonth('2025-06'));
+  const [todoistTasks, setTodoistTasks] = useState([]);
 
   const router = useRouter();
-  const token = router.query.token;
+  const { token } = router.query;
 
   useEffect(() => {
     const stored = localStorage.getItem(getStorageKey(currentMonth));
@@ -60,10 +54,11 @@ const TaskPlanner = () => {
       },
     })
       .then((res) => res.json())
-      .then((todoistTasks) => {
-        console.log('Fetched Todoist tasks:', todoistTasks);
-        // Optional: Merge or use Todoist tasks
-      });
+      .then((data) => {
+        console.log('Fetched Todoist tasks:', data);
+        setTodoistTasks(data.map(task => task.content));
+      })
+      .catch((err) => console.error('Error fetching Todoist tasks:', err));
   }, [token]);
 
   const initializeTasks = () => {
@@ -113,7 +108,7 @@ const TaskPlanner = () => {
 
   return (
     <section id="planner">
-      <Link href="/" className="btn-home">Home</Link>
+      <Link href="/"><a className="btn-home">Home</a></Link>
 
       <div className="planner-header">
         <label htmlFor="monthSelect">Select Month:</label>
@@ -190,6 +185,17 @@ const TaskPlanner = () => {
           </div>
         ))}
       </div>
+
+      {todoistTasks.length > 0 && (
+        <div className="todoist-section">
+          <h3>📝 Synced Todoist Tasks</h3>
+          <ul>
+            {todoistTasks.map((task, index) => (
+              <li key={index}>{task}</li>
+            ))}
+          </ul>
+        </div>
+      )}
     </section>
   );
 };
