@@ -4,7 +4,7 @@ import { useRouter } from 'next/router';
 
 const defaultTasks = {
   professional: ["Finish project report", "Attend team meeting", "Send client follow-up email", "Review quarterly goals"],
-  health: ["Go for a 30-minute run", "Drink 8 glasses of water", "Stretch for 10 minutes", "Book dentist appointment", "Prepare healthy meals for the week"],
+  health: ["Go for a 30-minute run", "Drink 8 glasses of water", "Stretch for 10 minutes",  "Prepare healthy meals for the week"],
   lifegoals: ["Plan next week’s schedule", "Read a chapter of a personal development book", "Meditate for 15 minutes", "Practice a new skill or hobby", "Set monthly savings goal"],
   finance: ["Review monthly budget", "Pay credit card bill", "Track daily expenses", "Research investment options", "Organize tax documents"],
   selfcare: ["Meditate for 10 minutes", "Take a relaxing bath", "Read a favorite book", "Journal thoughts and feelings", "Listen to calming music"],
