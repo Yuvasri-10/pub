@@ -153,7 +153,10 @@ header h1::before {
       font-weight: 600;
       text-decoration: none;
     }
-
+    nav a:hover {
+        background-color: #ffdde5; 
+        color: #ff6f87; 
+    }
   
 .intro {
   max-width: 800px;
