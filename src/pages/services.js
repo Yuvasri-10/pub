@@ -108,7 +108,7 @@ const TaskPlanner = () => {
 
   return (
     <section id="planner">
-      <Link href="/"><a className="btn-home">Home</a></Link>
+      <Link href="/" className="btn-home">Home</Link>
 
       <div className="planner-header">
         <label htmlFor="monthSelect">Select Month:</label>
